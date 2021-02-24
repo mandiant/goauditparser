@@ -530,7 +530,7 @@ This cache file is used for keeping track of which files have been parsed. GoAud
 
 ## All Version Changes
 
-**v1.0.0 - January X, 2021**
+**v1.0.0 - February 24, 2021**
 * Initial public release of GoAuditParser!
 
 ## FAQ & Support
