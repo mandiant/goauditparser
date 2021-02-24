@@ -25,7 +25,7 @@ Download precompiled builds of the latest version for Windows, Mac, and Linux lo
 
 ## Recent Version Changes
 
-**v1.0.0 - January X, 2021**
+**v1.0.0 - February 24, 2021**
 * Initial public release of GoAuditParser!
 
 ## Table of Contents
