@@ -1,0 +1,780 @@
+{
+    "Version": "1.0.0",
+    "Dont_Overwrite_With_New_Update": false,
+    "Include_Summary_Headers": true,
+    "Unique_Row_Per_Timestamp": false,
+    "Include_Timestampless_Audits": true,
+    "Extra_Fields_Order": ["Tag","Notes","Hostname","AgentID","MD5","Size","User","SignatureExists","SignatureVerified","SubAuditType","Extra1","Extra2","Extra3"],
+    "Audit_Timeline_Configs":
+    [
+        {   
+            "Name": "CookieHistoryItem",
+            "Filename_Suffix": "CookieHistoryItem",
+            "Timestamp_Fields": [
+                "CreationDate",
+                "ExpirationDate",
+                "LastAccessedDate",
+                "LastModifiedDate"
+            ],
+            "Summary_Fields": [
+                "FilePath",
+                "CookiePath"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {   
+            "Name": "CookieHistoryItem",
+            "Filename_Suffix": "CookieHistoryItem",
+            "Timestamp_Fields": [
+                "CreationDate",
+                "ExpirationDate",
+                "LastAccessedDate",
+                "LastModifiedDate"
+            ],
+            "Summary_Fields": [
+                "FilePath",
+                "CookiePath"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "DiskItem",
+            "Filename_Suffix": "DiskItem",
+            "Timestamp_Fields": [],
+            "Summary_Fields": [
+                "DiskName",
+                "DiskSize",
+                "PartitionList.Partition.PartitionNumber",
+                "PartitionList.Partition.PartitionOffset",
+                "PartitionList.Partition.PartitionLength",
+                "PartitionList.Partition.PartitionType"
+            ],
+            "Extra_Fields": [
+                "PartitionList.Partition.PartitionLength>Size",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "DnsEntryItem",
+            "Filename_Suffix": "DnsEntryItem",
+            "Timestamp_Fields": [],
+            "Summary_Fields": [
+                "Host",
+                "RecordName",
+                "RecordType",
+                "RecordData.IPv4Address",
+                "TimeToLive"
+            ],
+            "Extra_Fields": [
+                "DataLength>Size",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "DriverItem",
+            "Filename_Suffix": "DriverItem",
+            "Timestamp_Fields": [],
+            "Summary_Fields": [
+                "DeviceName",
+                "DriverName"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "EventItem_DnsLookupEvent",
+            "Filename_Suffix": "EventItem_DnsLookupEvent",
+            "Timestamp_Fields": [
+                "EventBufferTime_DnsLookupEvent>DnsLookupEvent"
+            ],
+            "Summary_Fields": [
+                "ProcessPath",
+                "Process",
+                "DNSHostname",
+                "Pid"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "EventBufferType>SubAuditType",
+                "Process||Pid>Extra1",
+                "DNSHostname>Extra2",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "EventItem_FileWriteEvent",
+            "Filename_Suffix": "EventItem_FileWriteEvent",
+            "Timestamp_Fields": [
+                "EventBufferTime_FileWriteEvent>FileWriteEvent"
+            ],
+            "Summary_Fields": [
+                "ProcessPath",
+                "Process",
+                "FullPath",
+                "DevicePath",
+                "Pid",
+                "Closed",
+                "Writes",
+                "Size",
+                "NumBytesSeenWritten",
+                "LowestFileOffsetSeen",
+                "TextAtLowestOffset"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "Md5>MD5",
+                "Size",
+                "EventBufferType>SubAuditType",
+                "Process||Pid>Extra1",
+                "FullPath>Extra2",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "EventItem_ImageLoadEvent",
+            "Filename_Suffix": "EventItem_ImageLoadEvent",
+            "Timestamp_Fields": [
+                "EventBufferTime_ImageLoadEvent>ImageLoadEvent"
+            ],
+            "Summary_Fields": [
+                "ProcessPath",
+                "Process",
+                "FullPath",
+                "DevicePath",
+                "Pid"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "EventBufferType>SubAuditType",
+                "Process||Pid>Extra1",
+                "FullPath>Extra2",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "EventItem_Ipv4NetworkEvent",
+            "Filename_Suffix": "EventItem_Ipv4NetworkEvent",
+            "Timestamp_Fields": [
+                "EventBufferTime_Ipv4NetworkEvent>Ipv4NetworkEvent"
+            ],
+            "Summary_Fields": [
+                "ProcessPath",
+                "Process",
+                "LocalIP",
+                "LocalPort",
+                "RemoteIP",
+                "RemotePort",
+                "Protocol",
+                "Pid"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "EventBufferType>SubAuditType",
+                "Process||Pid>Extra1",
+                "RemoteIP||RemotePort>Extra2",
+                "Protocol>Extra3",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "EventItem_ProcessEvent",
+            "Filename_Suffix": "EventItem_ProcessEvent",
+            "Timestamp_Fields": [
+                "EventBufferTime_ProcessEvent>ProcessEvent"
+            ],
+            "Summary_Fields": [
+                "ProcessPath",
+                "Process",
+                "ProcessCmdLine",
+                "ParentProcessPath",
+                "ParentProcess",
+                "EventType",
+                "Pid",
+                "ParentPid",
+                "StartTime"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "Md5>MD5",
+                "EventBufferType>SubAuditType",
+                "Process||Pid>Extra1",
+                "ParentProcess||ParentPid>Extra2",
+                "EventType>Extra3",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "EventItem_RegKeyEvent",
+            "Filename_Suffix": "EventItem_RegKeyEvent",
+            "Timestamp_Fields": [
+                "EventBufferTime_RegKeyEvent>RegKeyEvent"
+            ],
+            "Summary_Fields": [
+                "ProcessPath",
+                "Process",
+                "Path",
+                "ValueName",
+                "Text",
+                "ValueType",
+                "EventType",
+                "Pid"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "EventBufferType>SubAuditType",
+                "Process||Pid>Extra1",
+                "EventType>Extra2",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "EventItem_UrlMonitorEvent",
+            "Filename_Suffix": "EventItem_UrlMonitorEvent",
+            "Timestamp_Fields": [
+                "EventBufferTime_UrlMonitorEvent>UrlMonitorEvent"
+            ],
+            "Summary_Fields": [
+                "ProcessPath",
+                "Process",
+                "DNSHostname",
+                "RequestUrl",
+                "RemoteIpAddress",
+                "Text",
+                "LocalPort",
+                "RemotePort",
+                "UrlMethod",
+                "UserAgent",
+                "Pid"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "Process||Pid>Extra1",
+                "RemoteIpAddress>Extra2",
+                "EventBufferType>SubAuditType",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "EventLogItem",
+            "Filename_Suffix": "EventLogItem",
+            "Timestamp_Fields": [
+                "genTime",
+                "writeTime"
+            ],
+            "Summary_Fields": [
+                "EID",
+                "index",
+                "log",
+                "source",
+                "type",
+                "message",
+                "unformattedMessage.string"
+            ],
+            "Extra_Fields": [
+                "user>User",
+                "log>SubAuditType",
+                "source>Extra1",
+                "type>Extra2",
+                "category>Extra3",
+                "Hostname",
+                "AgentID"
+            ]
+        },      
+        {   
+            "Name": "FileDownloadHistoryItem",
+            "Filename_Suffix": "FileDownloadHistoryItem",
+            "Timestamp_Fields": [
+                "LastModifiedDate",
+                "LastCheckedDate",
+                "LastAccessedDate",
+                "StartDate",
+                "EndDate"
+            ],
+            "Summary_Fields": [
+                "TargetDirectory",
+                "FileName",
+                "SourceURL",
+                "DownloadType",
+                "BrowserName",
+                "Profile"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID",
+                "BrowserName>Extra1",
+                "Username>User",
+                "BytesDownloaded>Size"
+            ]
+        },
+        {   
+            "Name": "FileItem",
+            "Filename_Suffix": "FileItem",
+            "Timestamp_Fields": [
+                "Created",
+                "Modified",
+                "Accessed",
+                "Changed",
+                "FilenameCreated",
+                "FilenameModified",
+                "FilenameAccessed",
+                "FilenameChanged"
+            ],
+            "Summary_Fields": [
+                "FullPath"
+            ],
+            "Extra_Fields": [
+                "Md5sum>MD5",
+                "SizeInBytes>Size",
+                "Username>User",
+                "FileAttributes>Extra1",
+                "Group||GroupID>Extra2",
+                "Permissions>Extra3",
+                "PEInfo.DigitalSignature.SignatureExists>SignatureExists",
+                "PEInfo.DigitalSignature.SignatureVerified>SignatureVerified",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {   
+            "Name": "FormHistoryItem",
+            "Filename_Suffix": "FormHistoryItem",
+            "Timestamp_Fields": [
+                "FirstUsedDate",
+                "LastUsedDate"
+            ],
+            "Summary_Fields": [
+                "FormType",
+                "FormFieldName",
+                "FormFieldValue"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "FormType>SubAuditType",
+                "BrowserName>Extra1",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "LoginHistoryItem",
+            "Filename_Suffix": "LoginHistoryItem",
+            "Timestamp_Fields": [
+                "StartTime",
+                "EndTime"
+            ],
+            "Summary_Fields": [
+                "Username",
+                "IPv4Address",
+                "Hostname",
+                "Terminal"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID",
+                "RecordType||Path>SubAuditType",
+                "PID>Extra1",
+                "IsFailedLogin>Extra2",
+                "IsRemoteLogin>Extra3",
+                "Username>User"
+            ]
+        },
+        {
+            "Name": "ModuleItem",
+            "Filename_Suffix": "ModuleItem",
+            "Timestamp_Fields": [],
+            "Summary_Fields": [
+                "Filename",
+                "ParmList.Parm.Name",
+                "AliasList.Alias.Name",
+                "Address",
+                "SrcVersion",
+                "ModulePath",
+                "ModuleName"
+            ],
+            "Extra_Fields": [
+                "ModuleSize||Size>Size",
+                "Status>Extra1",
+                "Md5sum>MD5",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "PersistenceType",
+            "Filename_Suffix": "PersistenceItem",
+            "Timestamp_Fields": [
+                "Created",
+                "FileAccessed",
+                "FileChanged",
+                "FileChanged",
+                "FileCreated",
+                "FileItem.PEInfo.PETimeStamp",
+                "FileModified",
+                "LastRun",
+                "RegModified"
+                
+            ],
+            "Summary_Fields": [
+                "FilePath",
+                "LinkFilePath",
+                "ServicePath",
+                "serviceDLL",
+                "RegPath",
+                "RegText",
+                "Command",
+                "ServiceName",
+                "arguments",
+                "descriptiveName",
+                "mode",
+                "status",
+                "startedAs",
+                "ServiceItem.pathmd5sum",
+                "ServiceItem.serviceDLLmd5sum"
+            ],
+            "Extra_Fields": [
+                "PersistenceType>SubAuditType",
+                "md5sum>MD5",
+                "pathmd5sum>MD5",
+                "serviceDLLmd5sum>MD5",
+                "FileItem.Md5sum>MD5",
+                "ServiceItem.pathmd5sum>MD5",
+                "ServiceItem.serviceDLLmd5sum>MD5",
+                "pathSignatureExists>SignatureExists",
+                "pathSignatureVerified>SignatureVerified",
+                "serviceDLLSignatureExists>SignatureExists",
+                "serviceDLLSignatureVerified>SignatureVerified",
+                "SignatureExists",
+                "SignatureVerified",
+                "FileItem.SizeInBytes>Size",
+                "RegOwner>User",
+                "FileOwner>User",
+                "startedAs>User",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "PortItem",
+            "Filename_Suffix": "PortItem",
+            "Timestamp_Fields": [
+                "CreationTime"
+            ],
+            "Summary_Fields": [
+                "path",
+                "process",
+                "localIP",
+                "remoteIP",
+                "localPort",
+                "remotePort",
+                "protocol"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID",
+                "pid>Extra1",
+                "state>SubAuditType"
+            ]
+        },
+        {
+            "Name": "PrefetchItem",
+            "Filename_Suffix": "PrefetchItem",
+            "Timestamp_Fields": [
+                "Created",
+                "LastRun"
+            ],
+            "Summary_Fields": [
+                "FullPath",
+                "ApplicationFullPath"
+            ],
+            "Extra_Fields": [
+                "SizeInBytes>Size",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "ProcessItem",
+            "Filename_Suffix": "ProcessItem",
+            "Timestamp_Fields": [
+                "startTime",
+                "userTime",
+                "endTime",
+                "kernelTime"
+            ],
+            "Summary_Fields": [
+                "arguments",
+                "name",
+                "path"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID",
+                "Username>User",
+                "pid>Extra1",
+                "parentpid>Extra2"
+            ]
+        },
+        {
+            "Name": "QuarantineEventItem",
+            "Filename_Suffix": "QuarantineEventItem",
+            "Timestamp_Fields": [
+                "TimeStamp"
+            ],
+            "Summary_Fields": [
+                "User",
+                "AgentName",
+                "DataURLString",
+                "OriginURLString",
+                "SenderName",
+                "SenderAddress",
+                "OriginTitle"
+            ],
+            "Extra_Fields": [
+                "User",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "RegistryItem",
+            "Filename_Suffix": "RegistryItem",
+            "Timestamp_Fields": [
+                "Modified"
+            ],
+            "Summary_Fields": [
+                "Path",
+                "Text"
+            ],
+            "Extra_Fields": [
+                "ReportedLengthInBytes>Size",
+                "Username>User",
+                "Type>Extra1",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "RouteEntryItem",
+            "Filename_Suffix": "RouteEntryItem",
+            "Timestamp_Fields": [],
+            "Summary_Fields": [
+                "Interface",
+                "Destination"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "ServiceItem",
+            "Filename_Suffix": "ServiceItem",
+            "Timestamp_Fields": [],
+            "Summary_Fields": [
+                "path",
+                "name",
+                "arguments",
+                "descriptiveName",
+                "type",
+                "serviceDLL"
+            ],
+            "Extra_Fields": [
+                "pathmd5sum>MD5",
+                "serviceDLLmd5sum>MD5",
+                "Hostname",
+                "AgentID",
+                "startedAs>User",
+                "mode>Extra1",
+                "status>Extra2"
+            ]
+        },
+        {
+            "Name": "ShellHistoryItem",
+            "Filename_Suffix": "ShellHistoryItem",
+            "Timestamp_Fields": [
+                "Timestamp"
+            ],
+            "Summary_Fields": [
+                "Command"
+            ],
+            "Extra_Fields": [
+                "Shell>Extra1",
+                "FileOrder>Extra2",
+                "UserName>User",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "SystemInfoItem",
+            "Filename_Suffix": "SystemInfoItem",
+            "Timestamp_Fields": [
+                "installDate",
+                "date",
+                "appCreated"
+            ],
+            "Summary_Fields": [
+                "Hostname",
+                "AgentID",
+                "platform",
+                "OS",
+                "productName",
+                "buildNumber",
+                "OSbitness",
+                "kernelVersion",
+                "processor",
+                "drives",
+                "timezone",
+                "uptime",
+                "containmentState",
+                "domain",
+                "loggedOnUser",
+                "primaryIpAddress",
+                "primaryIpv4Address",
+                "networkArray.networkInfo.ipArray.ipInfo.ipAddress",
+                "MAC",
+                "networkArray.networkInfo.MAC"
+            ],
+            "Extra_Fields": [
+                "DataLength>Size",
+                "Hostname",
+                "AgentID",
+                "user>User",
+                "platform>SubAuditType",
+                "appVersion>Extra1"
+            ]
+        },
+        {
+            "Name": "SystemRestoreItem",
+            "Filename_Suffix": "SystemRestoreItem",
+            "Timestamp_Fields": [
+                "Created",
+                "FileItem.Created"
+            ],
+            "Summary_Fields": [
+                "ChangeLogEntryType",
+                "OriginalFileName"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "TaskItem",
+            "Filename_Suffix": "TaskItem",
+            "Timestamp_Fields": [
+                "MostRecentRunTime",
+                "NextRunTime",
+                "CreationDate",
+                "TriggerList.Trigger.TriggerBegin",
+                "TriggerList.Trigger.TriggerEnd"
+            ],
+            "Summary_Fields": [
+                "crontabCommand",
+                "ActionList.Action.ExecProgramPath",
+                "ActionList.Action.ExecArguments",
+                "Name",
+                "path",
+                "TriggerList.Trigger.TriggerEnabled",
+                "Creator",
+                "Comment",
+                "AccountLogonType",
+                "Status",
+                "ActionList.Action.ActionType",
+                "ActionList.Action.COMClassId",
+                "ActionList.Action.COMData",
+                "ActionList.Action.ExecWorkingDirectory",
+                "TriggerList.Trigger.TriggerFrequency",
+                "AccountRunLevel",
+                "Flag"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID",
+                "AccountName||userName>User",
+                "crontabPath>SubAuditType",
+                "Status||crontabMinute||crontabHour||crontabDayOfMonth||crontabMonth||crontabDayOfWeek>Extra1",
+                "TriggerList.Trigger.TriggerEnabled||path>Extra2",
+                "TriggerList.Trigger.TriggerFrequency||crontabJobIdentifier||crontabEvent||crontabPeriod||crontabDelay>Extra3",
+                "md5sum>MD5"
+            ]
+        },
+        {
+            "Name": "UrlHistoryItem",
+            "Filename_Suffix": "UrlHistoryItem",
+            "Timestamp_Fields": [
+                "LastVisitDate"
+            ],
+            "Summary_Fields": [
+                "URL",
+                "BrowserName",
+                "VisitType",
+                "VisitFrom",
+                "Typed"
+            ],
+            "Extra_Fields": [
+                "ReportedLengthInBytes>Size",
+                "Hostname",
+                "AgentID",
+                "Username>User",
+                "Profile>Extra1"
+            ]
+        },
+        {
+            "Name": "UserItem",
+            "Filename_Suffix": "UserItem",
+            "Timestamp_Fields": [
+                "LastLogin"
+            ],
+            "Summary_Fields": [
+                "fullname",
+                "description",
+                "SecurityType",
+                "disabled",
+                "lockedout",
+                "passwordrequired",
+                "userpasswordage"
+            ],
+            "Extra_Fields": [
+                "Username>User",
+                "SecurityType>Extra1",
+                "Hostname",
+                "AgentID"
+            ]
+        },
+        {
+            "Name": "VolumeItem",
+            "Filename_Suffix": "VolumeItem",
+            "Timestamp_Fields": [
+                "CreationTime"
+            ],
+            "Summary_Fields": [
+                "VolumeName",
+                "Name",
+                "DevicePath"
+            ],
+            "Extra_Fields": [
+                "Hostname",
+                "AgentID"
+            ]
+        }
+    ]
+}

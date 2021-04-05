@@ -25,6 +25,9 @@ Download precompiled builds of the latest version for Windows, Mac, and Linux lo
 
 ## Recent Version Changes
 
+**April 5, 2021**
+* Added configuration files `config.json` and `timeline.json` to the repository inside the folder `config`. These files must be placed in `~/.MandiantTools/GoAuditParser/` to be used by GoAuditParser, but are still automatically generated if not present at runtime.
+
 **v1.0.0 - February 25, 2021**
 * Initial public release of GoAuditParser!
 
@@ -46,7 +49,7 @@ Download precompiled builds of the latest version for Windows, Mac, and Linux lo
     1. [Main Configuration](#main-configuration)
     2. [Timeline Configuration](#timeline-configuration)
     3. [Parse Cache](#parse-cache)
-4. [Version Changes](#version-changes)
+4. [All Version Changes](#all-version-changes)
 5. [FAQ & Support](#faq--support)
 
 ## Usage and Flags
@@ -529,6 +532,9 @@ This cache file is used for keeping track of which files have been parsed. GoAud
 - [Back to top of "Configuration Files" Section](#configuration-files)
 
 ## All Version Changes
+
+**April 5, 2021**
+* Added configuration files `config.json` and `timeline.json` to the repository inside the folder `config`. These files must be placed in `~/.MandiantTools/GoAuditParser/` to be used by GoAuditParser, but are still automatically generated if not present at runtime.
 
 **v1.0.0 - February 25, 2021**
 * Initial public release of GoAuditParser!

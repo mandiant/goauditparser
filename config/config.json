@@ -1,0 +1,801 @@
+{
+    "Version": "1.0.0",
+    "Dont_Overwrite_With_New_Update": false,
+    "Automatically_Split_Big_XML": true,
+    "Automatically_Extract_Archives": true,
+    "Omit_Nonordered_Headers": false,
+    "Mandatory_Headers": [
+        "Tag",
+        "Notes",
+        "Hostname",
+        "AgentID"
+    ],
+    "Optional_Headers": [
+        "Audit UID",
+        "UID",
+        "Sequence Number",
+        "FireEyeGeneratedTime",
+        "EventBufferType"
+    ],
+    "Audit_Header_Configs": [
+        {
+            "Name": "AgentInfo",
+            "Item_Name": "AgentInfo",
+            "Header_Order": [],
+            "Headers_Omitted": []
+        },{
+            "Name": "ArpEntryItem",
+            "Item_Name": "ArpEntryItem",
+            "Header_Order": [
+                "Interface",
+                "InterfaceType",
+                "PhysicalAddress",
+                "IPv4Address",
+                "IPv6Address",
+                "IsRouter",
+                "LastReachable",
+                "LastUnreachable",
+                "CacheType",
+                "State"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "CookieHistoryItem",
+            "Item_Name": "CookieHistoryItem",
+            "Header_Order": [
+                "FileName",
+                "FilePath",
+                "CookiePath",
+                "CookieName",
+                "CookieValue",
+                "HostName",
+                "ExpirationDate",
+                "CreationDate",
+                "LastAccessedDate",
+                "LastModifiedDate",
+                "Username",
+                "Profile",
+                "BrowserName",
+                "BrowserVersion",
+                "IsSecure",
+                "IsHttpOnly"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "DiskItem",
+            "Item_Name": "DiskItem",
+            "Header_Order": [
+                "DiskName",
+                "DiskSize",
+                "PartitionList.Partition.PartitionNumber",
+                "PartitionList.Partition.PartitionOffset",
+                "PartitionList.Partition.PartitionLength",
+                "PartitionList.Partition.PartitionType"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "DnsEntryItem",
+            "Item_Name": "DnsEntryItem",
+            "Header_Order": [
+                "Host",
+                "RecordName",
+                "RecordType",
+                "TimeToLive",
+                "Flags",
+                "DataLength",
+                "RecordData"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "DriverItem",
+            "Item_Name": "DriverItem",
+            "Header_Order": [
+                "DriverName",
+                "DriverInit",
+                "DriverStartIo",
+                "DriverUnload",
+                "DeviceName",
+                "DriverObjectAddress",
+                "ImageBase",
+                "ImageSize",
+                "Md5sum",
+                "SignatureExists",
+                "SignatureVerified",
+                "SignatureDescription",
+                "CertificateIssuer"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "EventItem_DnsLookupEvent",
+            "Item_Name": "EventItem_DnsLookupEvent",
+            "Header_Order": [
+                "EventBufferTime_DnsLookupEvent",
+                "ProcessPath",
+                "Process",
+                "DNSHostname",
+                "Pid"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "EventItem_FileWriteEvent",
+            "Item_Name": "EventItem_FileWriteEvent",
+            "Header_Order": [
+                "EventBufferTime_FileWriteEvent",
+                "ProcessPath",
+                "Process",
+                "FullPath",
+                "DevicePath",
+                "Md5",
+                "Pid",
+                "Closed",
+                "Writes",
+                "Size",
+                "NumBytesSeenWritten",
+                "LowestFileOffsetSeen",
+                "TextAtLowestOffset"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "EventItem_ImageLoadEvent",
+            "Item_Name": "EventItem_ImageLoadEvent",
+            "Header_Order": [
+                "EventBufferTime_ImageLoadEvent",
+                "ProcessPath",
+                "Process",
+                "FullPath",
+                "DevicePath",
+                "Pid"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "EventItem_Ipv4NetworkEvent",
+            "Item_Name": "EventItem_Ipv4NetworkEvent",
+            "Header_Order": [
+                "EventBufferTime_Ipv4NetworkEvent",
+                "ProcessPath",
+                "Process",
+                "LocalIP",
+                "LocalPort",
+                "RemoteIP",
+                "RemotePort",
+                "Protocol",
+                "Pid"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "EventItem_ProcessEvent",
+            "Item_Name": "EventItem_ProcessEvent",
+            "Header_Order": [
+                "EventBufferTime_ProcessEvent",
+                "ProcessPath",
+                "Process",
+                "ProcessCmdLine",
+                "Md5",
+                "ParentProcessPath",
+                "ParentProcess",
+                "EventType",
+                "Pid",
+                "ParentPid",
+                "StartTime"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "EventItem_RegKeyEvent",
+            "Item_Name": "EventItem_RegKeyEvent",
+            "Header_Order": [
+                "EventBufferTime_RegKeyEvent",
+                "ProcessPath",
+                "Process",
+                "Path",
+                "ValueName",
+                "Text",
+                "ValueType",
+                "EventType",
+                "Pid"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "EventItem_UrlMonitorEvent",
+            "Item_Name": "EventItem_UrlMonitorEvent",
+            "Header_Order": [
+                "EventBufferTime_UrlMonitorEvent",
+                "ProcessPath",
+                "Process",
+                "DNSHostname",
+                "RequestUrl",
+                "RemoteIpAddress",
+                "Text",
+                "LocalPort",
+                "RemotePort",
+                "UrlMethod",
+                "UserAgent",
+                "Pid"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "EventLogItem",
+            "Item_Name": "EventLogItem",
+            "Header_Order": [
+                "genTime",
+                "writeTime",
+                "log",
+                "source",
+                "EID",
+                "type",
+                "message",
+                "user",
+                "index",
+                "machine",
+                "category",
+                "CorrelationActivityId",
+                "CorrelationRelatedActivityId",
+                "ExecutionProcessId",
+                "ExecutionThreadId"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "FileDownloadHistoryItem",
+            "Item_Name": "FileDownloadHistoryItem",
+            "Header_Order": [
+                "Profile",
+                "BrowserName",
+                "BrowserVersion",
+                "Username",
+                "DownloadType",
+                "SourceURL",
+                "TargetDirectory",
+                "StartDate",
+                "EndDate",
+                "LastCheckedDate",
+                "LastAccessedDate",
+                "LastModifiedDate",
+                "BytesDownloaded",
+                "MaxBytes"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "FileItem",
+            "Item_Name": "FileItem",
+            "Header_Order": [
+                "FullPath",
+                "Created",
+                "Modified",
+                "Accessed",
+                "Changed",
+                "FilenameCreated",
+                "FilenameModified",
+                "FilenameAccessed",
+                "FilenameChanged",
+                "SizeInBytes",
+                "Md5sum",
+                "Username",
+                "FileAttributes",
+                "INode",
+                "SecurityID",
+                "SecurityType",
+                "DevicePath",
+                "Drive",
+                "FilePath",
+                "FileName",
+                "FileExtension"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "FormHistoryItem",
+            "Item_Name": "FormHistoryItem",
+            "Header_Order": [
+                "Username",
+                "Profile",
+                "BrowserName",
+                "BrowserVersion",
+                "FormType",
+                "FormFieldName",
+                "FormFieldValue",
+                "TimesUsed",
+                "FirstUsedDate",
+                "LastUsedDate",
+                "Guid"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "GroupItem",
+            "Item_Name": "GroupItem",
+            "Header_Order": [
+                "GroupName",
+                "fullname",
+                "groupguid",
+                "userlist.username",
+                "gid"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "HiveItem",
+            "Item_Name": "HiveItem",
+            "Header_Order": [
+                "Name",
+                "Path"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "HookItem",
+            "Item_Name": "HookItem",
+            "Header_Order": [
+                "HookDescription",
+                "HookedFunction",
+                "HookedModule",
+                "HookingModule",
+                "HookingAddress",
+                "DigitalSignatureHooking",
+                "DigitalSignatureHooked"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "LoginHistoryItem",
+            "Item_Name": "LoginHistoryItem",
+            "Header_Order": [
+                "Path",
+                "StartTime",
+                "EndTime",
+                "SessionLength",
+                "Hostname",
+                "IsRemoteLogin",
+                "IPv4Address",
+                "IPv6Address",
+                "Username",
+                "RecordType",
+                "PID",
+                "Terminal",
+                "IsFailedLogin"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "ModuleItem",
+            "Item_Name": "ModuleItem",
+            "Header_Order": [
+                "ModuleAddress",
+                "ModuleInit",
+                "ModuleBase",
+                "ModuleSize",
+                "ModulePath",
+                "ModuleName"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "PersistenceItem",
+            "Item_Name": "PersistenceItem",
+            "Header_Order": [
+                "PersistenceType",
+                "status",
+                "serviceDLLCertificateIssuer",
+                "md5sum",
+                "TaskFileName",
+                "SignatureVerified",
+                "RegistryItem",
+                "pathSignatureDescription",
+                "mode",
+                "CertificateIssuer",
+                "serviceDLLCertificateSubject",
+                "RegOwner",
+                "MagicHeader",
+                "detectedAnomaly",
+                "Scheduled",
+                "FileModified",
+                "pathSignatureVerified",
+                "serviceDLL",
+                "FileCreated",
+                "arguments",
+                "ServiceItem",
+                "SignatureExists",
+                "FileOwner",
+                "FileChanged",
+                "startedAs",
+                "FileItem",
+                "SignatureDescription",
+                "serviceDLLmd5sum",
+                "Created",
+                "RegText",
+                "pathmd5sum",
+                "TaskStatus",
+                "RegModified",
+                "ServiceName",
+                "Command",
+                "TaskFullPath",
+                "ServicePath",
+                "TaskName",
+                "pathCertificateIssuer",
+                "serviceDLLSignatureExists",
+                "LastRun",
+                "serviceDLLSignatureDescription",
+                "serviceDLLMagicHeader",
+                "pathMagicHeader",
+                "FilePath",
+                "pathCertificateSubject",
+                "FileAccessed",
+                "descriptiveName",
+                "CertificateSubject",
+                "serviceDLLSignatureVerified",
+                "pathSignatureExists",
+                "RegPath"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "PortItem",
+            "Item_Name": "PortItem",
+            "Header_Order": [
+                "pid",
+                "process",
+                "path",
+                "state",
+                "localIP",
+                "remoteIP",
+                "localPort",
+                "remotePort",
+                "protocol"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "PrefetchItem",
+            "Item_Name": "PrefetchItem",
+            "Header_Order": [
+                "ApplicationFileName",
+                "ApplicationFullPath",
+                "Created",
+                "LastRun",
+                "TimesExecuted",
+                "ReportedSizeInBytes",
+                "FullPath",
+                "SizeInBytes",
+                "PrefetchHash"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "ProcessItem",
+            "Item_Name": "ProcessItem",
+            "Header_Order": [
+                "pid",
+                "parentpid",
+                "path",
+                "name",
+                "arguments",
+                "Username",
+                "SecurityID",
+                "SecurityType",
+                "startTime",
+                "kernelTime",
+                "userTime"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "QuarantineEventItem",
+            "Item_Name": "QuarantineEventItem",
+            "Header_Order": [
+                "User",
+                "EventIdentifier",
+                "TimeStamp",
+                "AgentBundleIdentifier",
+                "AgentName",
+                "DataURLString",
+                "TypeNumber",
+                "OriginURLString"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "QuarantineListItem",
+            "Item_Name": "QuarantineListItem",
+            "Header_Order": [
+                "QuarId",
+                "CorrelationId",
+                "QuarantineTime",
+                "Final",
+                "ObjectType",
+                "FilePath",
+                "FileSize",
+                "FileMD5",
+                "FileSHA1",
+                "FileState"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "RegistryItem",
+            "Item_Name": "RegistryItem",
+            "Header_Order": [
+                "Path",
+                "Text",
+                "Modified",
+                "Username",
+                "SecurityID",
+                "Hive",
+                "KeyPath",
+                "ValueName",
+                "Type",
+                "Value",
+                "NumValues",
+                "NumSubKeys",
+                "ReportedLengthInBytes"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "RouteEntryItem",
+            "Item_Name": "RouteEntryItem",
+            "Header_Order": [
+                "Interface",
+                "Destination",
+                "Netmask",
+                "Gateway",
+                "RouteType",
+                "Protocol",
+                "RouteAge",
+                "Metric",
+                "IsIPv6"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "ScanSummary",
+            "Item_Name": "ScanSummary",
+            "Header_Order": [
+                "uuid",
+                "scan-name",
+                "scan-type",
+                "scanned-object",
+                "infected-object",
+                "actioned-object",
+                "timestamp",
+                "start-time",
+                "end-time",
+                "scan-result",
+                "scan-error",
+                "product-version",
+                "engine-version",
+                "content-version",
+                "reboot-required",
+                "scan-correlation-id", 
+                "scan-summary-version"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "ServiceItem",
+            "Item_Name": "ServiceItem",
+            "Header_Order": [
+                "name",
+                "descriptiveName",
+                "description",
+                "mode",
+                "startedAs",
+                "path",
+                "arguments",
+                "pathmd5sum",
+                "pathSignatureExists",
+                "pathSignatureVerified",
+                "pathSignatureDescription",
+                "pathCertificateSubject",
+                "pathCertificateIssuer",
+                "serviceDLL",
+                "serviceDLLmd5sum",
+                "serviceDLLSignatureExists",
+                "serviceDLLSignatureVerified",
+                "serviceDLLSignatureDescription",
+                "serviceDLLCertificateSubject",
+                "serviceDLLCertificateIssuer",
+                "status",
+                "pid",
+                "type",
+                "md5sum",
+                "sha1sum",
+                "sha256sum",
+                "userName",
+                "groupName",
+                "reference"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "ShellHistoryItem",
+            "Item_Name": "ShellHistoryItem",
+            "Header_Order": [
+                "FileOrder",
+                "Command",
+                "UserName",
+                "Shell",
+                "Timestamp"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "SudoLogItem",
+            "Item_Name": "SudoLogItem",
+            "Header_Order": [
+            "timestamp",
+            "ModifiedTimestamp",
+            "suOrSudo",
+            "username",
+            "tty",
+            "pwd",
+            "userExecuteAs",
+            "command",
+            "success",
+            "SourceLog"
+
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "Syslog",
+            "Item_Name": "Syslog",
+            "Header_Order": [
+                "ID",
+                "Time",
+                "Level",
+                "PID",
+                "UID",
+                "GID",
+                "Host",
+                "Sender",
+                "Facility",
+                "Message"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "SystemInfoItem",
+            "Item_Name": "SystemInfoItem",
+            "Header_Order": [
+                "machine",
+                "totalphysical",
+                "availphysical",
+                "uptime",
+                "OS",
+                "OSbitness",
+                "hostname",
+                "date",
+                "user",
+                "domain",
+                "processor",
+                "patchLevel",
+                "buildNumber",
+                "procType",
+                "productID",
+                "productName",
+                "regOrg",
+                "regOwner",
+                "installDate",
+                "MAC",
+                "timezoneDST",
+                "timezoneStandard",
+                "networkArray",
+                "containmentState",
+                "timezone",
+                "gmtoffset",
+                "clockSkew",
+                "stateAgentStatus",
+                "primaryIpv4Address",
+                "primaryIpAddress",
+                "loggedOnUser",
+                "appVersion",
+                "platform",
+                "appCreated"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "SystemRestoreItem",
+            "Item_Name": "SystemRestoreItem",
+            "Header_Order": [],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "TaskItem",
+            "Item_Name": "TaskItem",
+            "Header_Order": [
+                "Name",
+                "VirtualPath",
+                "ExitCode",
+                "CreationDate",
+                "Comment",
+                "Creator",
+                "MaxRunTime",
+                "Flag",
+                "AccountName",
+                "AccountRunLevel",
+                "AccountLogonType",
+                "MostRecentRunTime",
+                "NextRunTime",
+                "Status"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "UrlHistoryItem",
+            "Item_Name": "UrlHistoryItem",
+            "Header_Order": [
+                "Profile",
+                "BrowserName",
+                "BrowserVersion",
+                "LastVisitDate",
+                "Username",
+                "URL",
+                "PageTitle",
+                "HostName",
+                "Typed",
+                "Hidden",
+                "VisitFrom",
+                "VisitType",
+                "VisitCount"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "UserItem",
+            "Item_Name": "UserItem",
+            "Header_Order": [
+                "Username",
+                "SecurityID",
+                "SecurityType",
+                "fullname",
+                "description",
+                "homedirectory",
+                "scriptpath",
+                "grouplist",
+                "LastLogin",
+                "disabled",
+                "lockedout",
+                "passwordrequired",
+                "userpasswordage",
+                "shell",
+                "userid",
+                "userguid"
+            ],
+            "Headers_Omitted": []
+        },
+        {
+            "Name": "VolumeItem",
+            "Item_Name": "VolumeItem",
+            "Header_Order": [
+                "VolumeName",
+                "DevicePath",
+                "DriveLetter",
+                "Type",
+                "Name",
+                "SerialNumber",
+                "FileSystemFlags",
+                "FileSystemName",
+                "ActualAvailableAllocationUnits",
+                "TotalAllocationUnits",
+                "BytesPerSector",
+                "SectorsPerAllocationUnit",
+                "CreationTime",
+                "IsMounted"
+            ],
+            "Headers_Omitted": []
+        }
+    ]
+}
