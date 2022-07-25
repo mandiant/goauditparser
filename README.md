@@ -11,7 +11,7 @@
 +-------------------+-------------------------------------------------------------+
 ```
 
-Download precompiled builds of the latest version for Windows, Mac, and Linux located in the **builds** folder.
+Download precompiled builds of the latest version for Windows, Mac, and Linux located in the **[Releases](https://github.com/mandiant/goauditparser/releases)** section.
 
 ## Features
 * Parse FireEye XML audit data from [FireEye Endpoint Security](https://www.fireeye.com/solutions/hx-endpoint-security-products.html) (previously "HX") and [Redline](https://www.fireeye.com/services/freeware/redline.html) into CSV format
